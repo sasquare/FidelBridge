@@ -5,67 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FidelBridge</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
       margin: 0;
       padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #f8fafc, #e0f2fe);
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8d43db79c8?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
-
-    .card {
-      background-color: white;
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      max-width: 400px;
-      width: 90%;
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
     }
-
-    .card h1 {
-      font-size: 28px;
-      color: #1a202c;
+    .content {
+      z-index: 1;
+      position: relative;
+      padding: 20px;
+      max-width: 800px;
+    }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 22px;
       margin-bottom: 20px;
+      font-style: italic;
+      font-weight: normal;
     }
-
-    .card p {
-      font-size: 16px;
-      color: #4a5568;
-      margin-bottom: 30px;
+    p {
+      font-size: 18px;
+      margin-bottom: 40px;
     }
-
     .button {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 15px;
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
       font-size: 16px;
       background-color: #0073e6;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
+      cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
     .button:hover {
       background-color: #005bb5;
-      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="overlay"></div>
+  <div class="content">
     <h1>Welcome to FidelBridge</h1>
-    <p>Please select your category to proceed:</p>
+    <h2>Bridging the Trust Gap</h2>
+    <p>At FidelBridge, we connect you with trusted experts for all your needs—right at your doorstep.</p>
     <a class="button" href="https://forms.gle/NnfVGFy6AE1ZjyMn6" target="_blank">I'm a Customer or Client</a>
     <a class="button" href="https://forms.gle/RxpUPujozYeJFNzQ7" target="_blank">I'm a Professional</a>
   </div>

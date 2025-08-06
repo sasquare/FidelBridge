@@ -5,60 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FidelBridge</title>
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
+      box-sizing: border-box;
     }
 
     body {
+      font-family: Arial, sans-serif;
       background: url('bg.jpg') no-repeat center center fixed;
       background-size: cover;
-      position: relative;
+      min-height: 100vh;
       color: white;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
     }
 
     .overlay {
-      position: absolute;
+      position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 1;
+      background: rgba(0,0,0,0.6);
+      z-index: 0;
     }
 
     .content {
+      z-index: 1;
       position: relative;
-      z-index: 2;
-      padding: 20px;
-      top: 50%;
-      transform: translateY(-50%);
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 10px;
     }
 
     h2 {
       font-size: 20px;
       font-style: italic;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 16px;
       margin-bottom: 30px;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 0 10px;
     }
 
     .button {
       display: inline-block;
       margin: 10px;
-      padding: 15px 25px;
+      padding: 14px 26px;
       font-size: 16px;
       background-color: #0073e6;
       color: white;
@@ -73,8 +73,8 @@
     }
 
     @media (max-width: 600px) {
-      h1 { font-size: 26px; }
-      h2, p { font-size: 16px; }
+      h1 { font-size: 28px; }
+      h2, p { font-size: 15px; }
       .button { padding: 12px 20px; font-size: 14px; }
     }
   </style>
